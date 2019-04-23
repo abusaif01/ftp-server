@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Shhhhh!!!!!</title>
+
+	<!-- CSS (load bootstrap from a CDN) -->
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<style>
+	    body    { padding-top:50px; }
+	</style>
+</head>
+<body class="container">
+
+	<nav class="navbar navbar-default" role="navigation">
+	<div class="container-fluid">
+
+	    <div class="navbar-header">
+	        <a class="navbar-brand" href="#">
+	            <span class="glyphicon glyphicon glyphicon-tree-deciduous"></span>
+	            Have Fun
+	        </a>
+
+	        <ul class="nav navbar-nav">
+	            <li><a href="/">Home</a></li>
+	            <li><a href="/nothing">No thing here </a></li>
+	        </ul>
+	    </div>
+
+	</div>
+	</nav>
+
+	<main>
+	    <div class="jumbotron">
+	        <h1>Can you Keep a secret?</h1>
+	        <p>Welcome to Saif's FTP. If you know about this then keep it a secret</p>
+	    </div>
+	    <ul>
+	    <% files.forEach(function(file) { %>
+	        <li><a href="<%= base %><%= file.dir %>"><%= file.name %></a> (<%= file.size %> GB) </li>
+	    <% }); %>
+	</ul>
+
+	</main>
+
+
+	<p class="text-center text-muted">© Copyright 2014 The Awesome People</p>
+
+</body>
+</html>
