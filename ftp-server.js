@@ -4,8 +4,10 @@ const path = require('path');
 const routes = require('express').Router();
 const fs = require('fs');
 
-const dataFolder = './data/';
+const dataFolder = '/Users/Saif/Downloads/movie/';
 const base = 'http://27.147.170.41:4211/file/';
+// const base = 'http://localhost:4211/file/';
+
 // routes.get('*', function (req, res) {
 //   res.sendFile(path.join(__dirname + '/dist/index.html'));
 // });
@@ -43,7 +45,7 @@ app.get('/', function(req, res) {
 });
 
 
-app.use('/file/',express.static('data'));
+app.use('/file/',express.static(dataFolder));
 // app.use('/img',express.static('/home/openup/assets/img'));
 app.use('/', routes);
 
